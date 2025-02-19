@@ -1,6 +1,6 @@
 ---
 title: "Carrot Cake"
-img: "./src/assets/carrot_cake.png"
+img: "/public/carrot_cake.png"
 price: 32.00
 ---
 
