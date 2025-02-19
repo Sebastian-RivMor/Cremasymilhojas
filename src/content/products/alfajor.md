@@ -1,6 +1,6 @@
 ---
 title: "Alfajor"
-img: "src/assets/alfajor.png"
+img: "alfajor.png"
 price: 18.00
 ---
 
