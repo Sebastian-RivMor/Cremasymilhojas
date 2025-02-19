@@ -1,0 +1,27 @@
+---
+import { getCollection } from 'astro:content';
+import type { CollectionEntry } from 'astro:content';
+
+const products: CollectionEntry<'products'>[] = await getCollection('products');
+---
+
+<section class="mx-auto px-4 max-w-screen-xl mt-10">
+    <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6 md:gap-10 lg:gap-20">
+        {
+            products.map(product => {
+                const { slug, data } = product;
+                const { title, img, price } = data;
+
+                return (
+                    <article class="bg-white border p-4 rounded-2xl shadow-md transition-transform duration-300 ease-in-out hover:scale-105 hover:shadow-2xl text-center">
+                        <h3 class="text-lg font-semibold">{title}</h3>
+                        <img class="mx-auto mb-2" src={`${img}`} alt={title} />
+                        <p class="text-gray-950 text-2xl">${price}</p>
+                        <button class="mt-2 px-4 py-2 bg-black text-white rounded-lg shadow-md hover:scale-105 cursor-pointer">Añadir al carrito</button>
+                    </article>
+                )
+            })
+        }
+    </div>
+</section>
+

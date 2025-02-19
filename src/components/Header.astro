@@ -1,0 +1,45 @@
+---
+import Banner from '../assets/banner.png';
+---
+
+<div class="mt-5 mx-auto px-4 max-w-screen-xl flex flex-col gap-10">
+    <section 
+        style={`background-image: url('${Banner.src}');`} 
+        class="bg-cover bg-center bg-text-left p-10 md:p-20 text-white rounded-lg shadow-lg flex-1 duration-300 hover:scale-105"
+    >
+        <p class="text-sm">Conoce nuestra historia</p>
+        <h1 class="text-4xl font-bold">Bienvenido a Crema y Milhojas</h1>
+        <h2 class="text-lg mt-2">El arte de la panadería artesanal</h2>
+        <button class="mt-4 px-6 py-2 bg-orange-500 rounded-lg text-white hover:bg-orange-600 transition">
+            Descubre más
+        </button>
+    </section>
+
+    <div class="flex flex-col lg:flex-row gap-10">
+        <!-- Segunda sección -->
+        <section 
+            style={`background-image: url('${Banner.src}');`} 
+            class="bg-cover bg-center text-left p-10 md:p-20 text-white rounded-lg shadow-lg flex-1 duration-300 hover:scale-105"
+        >
+            <p class="text-sm">Frescura garantizada</p>
+            <h1 class="text-3xl font-bold">Nuestros productos</h1>
+            <h2 class="text-md mt-2">Elaborados con los mejores ingredientes</h2>
+            <button class="mt-4 px-6 py-2 bg-orange-500 rounded-lg text-white hover:bg-orange-600 transition">
+                Explorar
+            </button>
+        </section>
+
+        <!-- Tercera sección -->
+        <section 
+            style={`background-image: url('${Banner.src}');`} 
+            class="bg-cover bg-center text-left p-10 md:p-20 text-white rounded-lg shadow-lg flex-1 duration-300 hover:scale-105"
+        >
+            <p class="text-sm">Hecho a mano</p>
+            <h1 class="text-3xl font-bold">Tradición y calidad</h1>
+            <h2 class="text-md mt-2">Cada pieza es única</h2>
+            <button class="mt-4 px-6 py-2 bg-orange-500 rounded-lg text-white hover:bg-orange-600 transition">
+                Ver más
+            </button>
+        </section>
+    </div>
+</div>
