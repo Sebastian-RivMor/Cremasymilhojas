@@ -1,5 +1,5 @@
 ---
-img: "src/assets/banner.png"
+img: "banner.png"
 title: "Repostería"
 impact: "Exquisitos detalles"
 description: "Que alegran tu día"

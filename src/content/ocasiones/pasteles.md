@@ -1,5 +1,5 @@
 ---
-img: "src/assets/banner.png"
+img: "banner.png"
 title: "Pasteles"
 impact: "Para toda ocación"
 description: "Deliciosos y personalizados"

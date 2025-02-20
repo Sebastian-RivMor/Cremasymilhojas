@@ -1,5 +1,5 @@
 ---
-img: "src/assets/banner.png"
+img: "banner.png"
 title: "Panaderia"
 impact: "Recetas únicas"
 description: "Que te encantarán"

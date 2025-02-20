@@ -1,6 +1,6 @@
 ---
 title: "Empanada"
-img: "src/assets/empanada.png"
+img: "empanada.png"
 price: 42.80
 ---
 
