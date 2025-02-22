@@ -2,6 +2,7 @@
 import Navbar from '../components/Navbar.astro';
 import Header from '../components/Header.astro';
 import Productos from '../components/Productos.astro';
+import Carrito from '../components/Carrito-flot.astro';
 import Ocasion from '../components/Ocasion.astro';
 import Footer from '../components/Footer.astro';
 import Layout from '../layouts/Layout.astro';
@@ -15,17 +16,8 @@ import "../styles/global.css";
 	<Navbar />
 	<Header />
 	<Productos />
-	<div 
-		style={`background-image: url('${Banner.src}');`} 
-        class="mt-10 bg-cover bg-center bg-text-left px-25 py-30 text-white shadow-lg flex-1 "
-		>
-		<p class="text-sm">!Nuevas Promociones!</p>
-        <h1 class="text-4xl font-bold">Sabores irresistibles</h1>
-        <h2 class="text-lg mt-2">Disfruta de nuestras ofertas especiales</h2>
-        <button class="mt-4 px-6 py-2 bg-orange-500 rounded-lg text-white hover:bg-orange-600 transition">
-            Descubre más
-        </button>
-	</div>
+	<Carrito />
 	<Ocasion />
+
 	<Footer/>
 </Layout>
