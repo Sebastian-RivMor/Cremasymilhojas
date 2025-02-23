@@ -2,8 +2,8 @@
 import CremaLogo from '../assets/logo_white.svg';
 ---
 
-<nav class="bg-black border-b ">
-	<div class="container mx-auto flex flex-wrap items-center justify-between py-4 border ">
+<nav class="">
+	<div class="container mx-auto flex flex-wrap items-center justify-between py-4  ">
 		<a href="#" class="flex items-center space-x-3 rtl:space-x-reverse">
 		<img src={CremaLogo.src} class="h-9" alt="Logo" />
 		</a>
@@ -41,25 +41,28 @@ import CremaLogo from '../assets/logo_white.svg';
     >
       <ul class="flex flex-col md:flex-row gap-5 bg-black md:bg-transparent p-4 md:p-0 md:space-x-5">
         <li>
-          <a href="#" class="text-white hover:text-amber-600">Inicio</a>
+          <a href="#" class="text-white hover:text-amber-500">Inicio</a>
         </li>
         <li>
-          <a href="#" class="text-white hover:text-amber-600">Productos</a>
+          <a href="#" class="text-white hover:text-amber-500">Productos</a>
         </li>
         <li>
-          <a href="#" class="text-white hover:text-amber-600">Sobre Nosotros</a>
+          <a href="#" class="text-white hover:text-amber-500">Sobre Nosotros</a>
         </li>
         <li>
-          <a href="#" class="text-white hover:text-amber-600">Contacto</a>
+          <a href="#" class="text-white hover:text-amber-500">Contacto</a>
         </li>
       </ul>
     </div>
 
     <!-- Botón de llamada a la acción -->
-    <div class="flex md:order-2 space-x-3 rtl:space-x-reverse">
-      <button class="bg-orange-500 text-white text-sm font-bold py-2 px-4 rounded-full hover:bg-orange-600 transition duration-300">
-        Ordenar Ahora
-      </button>
+    <div class="flex flex-col md:flex-row gap-5 md:order-2 space-x-3 rtl:space-x-reverse">
+      <div class="cursor-pointer">
+        <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" viewBox="0 0 24 24" fill="none" stroke="#ffffff" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-search"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.3-4.3"/></svg>        
+      </div>
+      <div class="cursor-pointer">
+        <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" viewBox="0 0 24 24" fill="none" stroke="#ffffff" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-user-round"><circle cx="12" cy="8" r="5"/><path d="M20 21a8 8 0 0 0-16 0"/></svg>
+      </div>
     </div>
   </div>
 </nav>

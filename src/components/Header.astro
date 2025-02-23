@@ -1,45 +1,114 @@
 ---
-import Banner from '/public/banner.png';
+import Croissant1 from "/public/croissant1.png";
+import Banner from "/public/banner.png";
 ---
 
-<div class="mt-5 mx-auto px-4 max-w-screen-xl flex flex-col gap-10">
-    <section 
-        style={`background-image: url('${Banner.src}');`} 
-        class="bg-cover bg-center bg-text-left p-10 md:p-20 text-white rounded-lg shadow-lg flex-1 duration-300 hover:scale-105"
+<div class="container mt-5 mx-auto max-w-screen-xl flex flex-col gap-10">
+  <div class="flex flex-col lg:flex-row min-h-[80vh]">
+    <!-- Texto 1 -->
+    <section
+      class="bg-cover bg-center text-left md:p-20 text-gray-600 rounded-lg shadow-lg flex-1"
     >
-        <p class="text-sm">Conoce nuestra historia</p>
-        <h1 class="text-4xl font-bold">Bienvenido a Crema y Milhojas</h1>
-        <h2 class="text-lg mt-2">El arte de la panadería artesanal</h2>
-        <button class="mt-4 px-6 py-2 bg-orange-500 rounded-lg text-white hover:bg-orange-600 transition">
-            Descubre más
-        </button>
+      <p class="text-sm">Frescura garantizada</p>
+      <h1 class="text-3xl font-bold">Nuestros productos</h1>
+      <h2 class="text-md mt-2">Elaborados con los mejores ingredientes</h2>
+      <button
+        class="mt-4 px-6 py-2 bg-amber-500 rounded-lg text-white hover:bg-amber-600 transition"
+      >
+        Explorar
+      </button>
     </section>
 
-    <div class="flex flex-col lg:flex-row gap-10">
-        <!-- Segunda sección -->
-        <section 
-            style={`background-image: url('${Banner.src}');`} 
-            class="bg-cover bg-center text-left p-10 md:p-20 text-white rounded-lg shadow-lg flex-1 duration-300 hover:scale-105"
-        >
-            <p class="text-sm">Frescura garantizada</p>
-            <h1 class="text-3xl font-bold">Nuestros productos</h1>
-            <h2 class="text-md mt-2">Elaborados con los mejores ingredientes</h2>
-            <button class="mt-4 px-6 py-2 bg-orange-500 rounded-lg text-white hover:bg-orange-600 transition">
-                Explorar
-            </button>
-        </section>
+    <!-- Imagen Pan -->
+    <section
+      style={`background-image: url('${Croissant1.src}');`}
+      class="bg-cover bg-center text-left p-10 md:p-20 flex-1 duration-300 hover:scale-105"
+    >
+    </section>
+  </div>
 
-        <!-- Tercera sección -->
-        <section 
-            style={`background-image: url('${Banner.src}');`} 
-            class="bg-cover bg-center text-left p-10 md:p-20 text-white rounded-lg shadow-lg flex-1 duration-300 hover:scale-105"
-        >
-            <p class="text-sm">Hecho a mano</p>
-            <h1 class="text-3xl font-bold">Tradición y calidad</h1>
-            <h2 class="text-md mt-2">Cada pieza es única</h2>
-            <button class="mt-4 px-6 py-2 bg-orange-500 rounded-lg text-white hover:bg-orange-600 transition">
-                Ver más
-            </button>
-        </section>
+  <!-- Seccion 3 columnas -->
+  <div class="container mx-auto grid grid-cols-1 md:grid-cols-3 gap-6 p-6">
+    <!-- Sección Productos con el ícono centrado -->
+    <div class="p-6 rounded-lg shadow-md text-center">
+      <div class="flex justify-center mb-2">
+        <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-croissant"><path d="m4.6 13.11 5.79-3.21c1.89-1.05 4.79 1.78 3.71 3.71l-3.22 5.81C8.8 23.16.79 15.23 4.6 13.11Z"/><path d="m10.5 9.5-1-2.29C9.2 6.48 8.8 6 8 6H4.5C2.79 6 2 6.5 2 8.5a7.71 7.71 0 0 0 2 4.83"/><path d="M8 6c0-1.55.24-4-2-4-2 0-2.5 2.17-2.5 4"/><path d="m14.5 13.5 2.29 1c.73.3 1.21.7 1.21 1.5v3.5c0 1.71-.5 2.5-2.5 2.5a7.71 7.71 0 0 1-4.83-2"/><path d="M18 16c1.55 0 4-.24 4 2 0 2-2.17 2.5-4 2.5"/></svg>
+      </div>
+      <h2 class="text-xl font-bold text-gray-600">Nuestros Productos</h2>
+      <p class="text-gray-500">
+        Descubre nuestra variedad de panes, postres y pasteles artesanales.
+      </p>
     </div>
+
+    <!-- Sección Delivery -->
+    <div class="p-6 rounded-lg shadow-md text-center">
+        <div class="flex justify-center mb-2">
+            <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-truck"><path d="M14 18V6a2 2 0 0 0-2-2H4a2 2 0 0 0-2 2v11a1 1 0 0 0 1 1h2"/><path d="M15 18H9"/><path d="M19 18h2a1 1 0 0 0 1-1v-3.65a1 1 0 0 0-.22-.624l-3.48-4.35A1 1 0 0 0 17.52 8H14"/><circle cx="17" cy="18" r="2"/><circle cx="7" cy="18" r="2"/></svg>       
+        </div>    
+      <h2 class="text-xl font-bold text-gray-600">Delivery</h2>
+      <p class="text-gray-500">
+        Recibe tu pan fresco en casa con nuestro servicio de reparto.
+      </p>
+    </div>
+
+    <!-- Sección Ingredientes y Calidad -->
+    <div class="p-6 rounded-lg shadow-md text-center">
+        <div class="flex justify-center mb-2">
+            <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-wheat"><path d="M2 22 16 8"/><path d="M3.47 12.53 5 11l1.53 1.53a3.5 3.5 0 0 1 0 4.94L5 19l-1.53-1.53a3.5 3.5 0 0 1 0-4.94Z"/><path d="M7.47 8.53 9 7l1.53 1.53a3.5 3.5 0 0 1 0 4.94L9 15l-1.53-1.53a3.5 3.5 0 0 1 0-4.94Z"/><path d="M11.47 4.53 13 3l1.53 1.53a3.5 3.5 0 0 1 0 4.94L13 11l-1.53-1.53a3.5 3.5 0 0 1 0-4.94Z"/><path d="M20 2h2v2a4 4 0 0 1-4 4h-2V6a4 4 0 0 1 4-4Z"/><path d="M11.47 17.47 13 19l-1.53 1.53a3.5 3.5 0 0 1-4.94 0L5 19l1.53-1.53a3.5 3.5 0 0 1 4.94 0Z"/><path d="M15.47 13.47 17 15l-1.53 1.53a3.5 3.5 0 0 1-4.94 0L9 15l1.53-1.53a3.5 3.5 0 0 1 4.94 0Z"/><path d="M19.47 9.47 21 11l-1.53 1.53a3.5 3.5 0 0 1-4.94 0L13 11l1.53-1.53a3.5 3.5 0 0 1 4.94 0Z"/></svg>
+        </div>
+      <h2 class="text-xl font-bold text-gray-600">
+        Ingredientes y Calidad
+      </h2>
+      <p class="text-gray-500">
+        Utilizamos ingredientes naturales para brindarte el mejor sabor y
+        frescura.
+      </p>
+    </div>
+  </div>
+
+  <section
+    style={`background-image: url('${Banner.src}');`}
+    class="bg-cover bg-center bg-text-left p-10 md:p-20 text-white rounded-lg shadow-lg flex-1 duration-300 hover:scale-105"
+  >
+    <p class="text-sm">Conoce nuestra historia</p>
+    <h1 class="text-4xl font-bold">Bienvenido a Crema y Milhojas</h1>
+    <h2 class="text-lg mt-2">El arte de la panadería artesanal</h2>
+    <button
+      class="mt-4 px-6 py-2 bg-amber-500 rounded-lg text-white hover:bg-amber-600 transition"
+    >
+      Descubre más
+    </button>
+  </section>
+
+  <div class="flex flex-col lg:flex-row gap-10">
+    <!-- Segunda sección -->
+    <section
+      style={`background-image: url('${Banner.src}');`}
+      class="bg-cover bg-center text-left p-10 md:p-20 text-white rounded-lg shadow-lg flex-1 duration-300 hover:scale-105"
+    >
+      <p class="text-sm">Frescura garantizada</p>
+      <h1 class="text-3xl font-bold">Nuestros productos</h1>
+      <h2 class="text-md mt-2">Elaborados con los mejores ingredientes</h2>
+      <button
+        class="mt-4 px-6 py-2 bg-amber-500 rounded-lg text-white hover:bg-amber-600 transition"
+      >
+        Explorar
+      </button>
+    </section>
+
+    <!-- Tercera sección -->
+    <section
+      style={`background-image: url('${Banner.src}');`}
+      class="bg-cover bg-center text-left p-10 md:p-20 text-white rounded-lg shadow-lg flex-1 duration-300 hover:scale-105"
+    >
+      <p class="text-sm">Hecho a mano</p>
+      <h1 class="text-3xl font-bold">Tradición y calidad</h1>
+      <h2 class="text-md mt-2">Cada pieza es única</h2>
+      <button
+        class="mt-4 px-6 py-2 bg-amber-500 rounded-lg text-white hover:bg-amber-600 transition"
+      >
+        Ver más
+      </button>
+    </section>
+  </div>
 </div>
