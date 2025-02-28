@@ -3,6 +3,7 @@ document.addEventListener("DOMContentLoaded", function () {
     const cartCount = document.getElementById('cart-count');
     const checkoutModal = document.getElementById('checkout-modal');
     const continueShopping = document.getElementById('continue-shopping');
+    const continuePago = document.getElementById('continue-pago');
     const checkoutOverlay = document.getElementById("checkout-overlay");
     const cartContainer = document.getElementById('cart-items');
 
@@ -35,7 +36,7 @@ document.addEventListener("DOMContentLoaded", function () {
                     <img src="${product.img}" class="checkout-img border">
                     <div class="flex-1 text-left">
                         <p class="font-semibold text-sm">${product.title}</p>
-                        <p class="text-gray-600 text-xs">$${product.price}</p>
+                        <p class="text-gray-600 text-xs">S/${product.price}</p>
                     </div>
                     <button class="remove-item text-red-600 text-xs px-2">✕</button>
                 `;
@@ -44,7 +45,7 @@ document.addEventListener("DOMContentLoaded", function () {
                 total += parseFloat(product.price)||0; // Sumar precios al total
             });
     
-            cartTotal.textContent = `Total: $${total.toFixed(2)}`; // Mostrar total con 2 decimales
+            cartTotal.textContent = `Total: S/${total.toFixed(2)}`; // Mostrar total con 2 decimales
     
             // Agregar evento a los botones de eliminar
             document.querySelectorAll('.remove-item').forEach((button, index) => {
@@ -107,6 +108,17 @@ document.addEventListener("DOMContentLoaded", function () {
     continueShopping.addEventListener('click', () => {
         checkoutModal.classList.add('hidden');
         checkoutOverlay.classList.add('hidden'); // Oculta el overlay
+    });
+
+    continuePago.addEventListener('click', () => {
+        const cart = JSON.parse(localStorage.getItem('cart')) || [];
+
+        if (cart.length === 0) {
+            alert("Tu carrito está vacío. Añade productos para comprar.");
+            return;
+        }
+
+        window.location.href = "/pago";
     });
     
     checkoutOverlay.addEventListener("click", () => {
