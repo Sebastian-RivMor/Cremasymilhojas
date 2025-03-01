@@ -1,36 +1,52 @@
 ---
 import Croissant1 from "/public/croissant1.png";
 import Banner from "/public/banner.png";
+import Baguette1 from "/public/baguette1.png";
 ---
 
-<div class="container mt-5 mx-auto max-w-screen-xl flex flex-col gap-10">
+<div class="container mx-auto max-w-screen-xl flex flex-col gap-6">
   <div class="flex flex-col lg:flex-row min-h-[80vh]">
     <!-- Texto 1 -->
     <section
-      class="bg-cover bg-center text-left md:p-20 text-gray-600 rounded-lg shadow-lg flex-1"
+      class="pt-4 bg-cover bg-center content-center text-left md:p-20 text-gray-600 rounded-lg flex-1"
     >
-      <p class="text-sm">Frescura garantizada</p>
-      <h1 class="text-3xl font-bold">Nuestros productos</h1>
-      <h2 class="text-md mt-2">Elaborados con los mejores ingredientes</h2>
-      <button
-        class="mt-4 px-6 py-2 bg-amber-500 rounded-lg text-white hover:bg-amber-600 transition"
-      >
-        Explorar
-      </button>
+      <!-- <p class="text-lg font-semibold bg-gradient-to-t from-yellow-400 via-orange-500 bg-clip-text text-transparent">¡El arte de la pasión hecha pan!</p> -->
+      <h1 class="leading-tight tracking-wide  text-5xl text-zinc-800 font-extrabold">
+        <span class="relative inline-block before:content-[''] before:absolute before:bottom-0 before:left-0 before:w-full before:h-1/3 before:bg-gradient-to-r before:from-yellow-500 before:to-amber-500">
+          <span class="relative text-zinc-800 dark:text-white">No es solo pan</span>
+        </span>, es una experiencia para los sentidos</h1>
+      <h2 class="py-6 text-zinc-700 leading-normal tracking-wide text-2xl font-semibold mt-2">Cada capa es un susurro de sabor y cada mordida, un romance inolvidable</h2>
+      <div class="flex text-xl font-medium items-center mt-4 ">
+        <button
+          class="text-amber-500 hover:text-amber-600 transition flex items-center group cursor-pointer"
+        >
+        Pruébalo y siente la diferencia
+        <div class="transition-transform transform group-hover:translate-x-2">
+          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-chevron-right"><path d="m9 18 6-6-6-6"/></svg>          
+        </div>
+      </button>        
+      </div>
+
     </section>
 
     <!-- Imagen Pan -->
-    <section
-      style={`background-image: url('${Croissant1.src}');`}
-      class="bg-cover bg-center text-left p-10 md:p-20 flex-1 duration-300 hover:scale-105"
-    >
+    <section class="py-0 relative bg-cover bg-center text-left p-10 md:p-20 flex-1">
+      <div class="cursor-pointer absolute z-50 inset-0 flex items-center transition justify-center duration-300 hover:scale-105">
+        <img src={Croissant1.src} alt="Croissant" class="max-w-full max-h-full object-contain" />
+      </div>
+      <div class="relative z-10 bg-gradient-to-bl from-yellow-400 from-10% via-orange-500 via-70% to-red-600 to-100% bg-clip-text text-transparent text-center  flex flex-col items-center content-between">
+        <div class="text-9xl font-bold  ">NUEVO</div>
+        <div class="text-9xl font-bold">NUEVO</div>
+        <div class="text-9xl font-bold ">NUEVO</div>
+        <div class="pt-6 text-2xl text-center text-gray-800">Ya Disponible</div>
+      </div>
     </section>
   </div>
 
   <!-- Seccion 3 columnas -->
-  <div class="container mx-auto grid grid-cols-1 md:grid-cols-3 gap-6 p-6">
+  <div class="pt-4 container mx-auto grid grid-cols-1 md:grid-cols-3 gap-6 px-6">
     <!-- Sección Productos con el ícono centrado -->
-    <div class="p-6 rounded-lg shadow-md text-center">
+    <div class="px-6 py-3 rounded-lg text-center">
       <div class="flex justify-center mb-2">
         <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-croissant"><path d="m4.6 13.11 5.79-3.21c1.89-1.05 4.79 1.78 3.71 3.71l-3.22 5.81C8.8 23.16.79 15.23 4.6 13.11Z"/><path d="m10.5 9.5-1-2.29C9.2 6.48 8.8 6 8 6H4.5C2.79 6 2 6.5 2 8.5a7.71 7.71 0 0 0 2 4.83"/><path d="M8 6c0-1.55.24-4-2-4-2 0-2.5 2.17-2.5 4"/><path d="m14.5 13.5 2.29 1c.73.3 1.21.7 1.21 1.5v3.5c0 1.71-.5 2.5-2.5 2.5a7.71 7.71 0 0 1-4.83-2"/><path d="M18 16c1.55 0 4-.24 4 2 0 2-2.17 2.5-4 2.5"/></svg>
       </div>
@@ -41,7 +57,7 @@ import Banner from "/public/banner.png";
     </div>
 
     <!-- Sección Delivery -->
-    <div class="p-6 rounded-lg shadow-md text-center">
+    <div class="px-6 py-3 rounded-lg text-center">
         <div class="flex justify-center mb-2">
             <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-truck"><path d="M14 18V6a2 2 0 0 0-2-2H4a2 2 0 0 0-2 2v11a1 1 0 0 0 1 1h2"/><path d="M15 18H9"/><path d="M19 18h2a1 1 0 0 0 1-1v-3.65a1 1 0 0 0-.22-.624l-3.48-4.35A1 1 0 0 0 17.52 8H14"/><circle cx="17" cy="18" r="2"/><circle cx="7" cy="18" r="2"/></svg>       
         </div>    
@@ -52,7 +68,7 @@ import Banner from "/public/banner.png";
     </div>
 
     <!-- Sección Ingredientes y Calidad -->
-    <div class="p-6 rounded-lg shadow-md text-center">
+    <div class="px-6 py-3 rounded-lg text-center">
         <div class="flex justify-center mb-2">
             <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-wheat"><path d="M2 22 16 8"/><path d="M3.47 12.53 5 11l1.53 1.53a3.5 3.5 0 0 1 0 4.94L5 19l-1.53-1.53a3.5 3.5 0 0 1 0-4.94Z"/><path d="M7.47 8.53 9 7l1.53 1.53a3.5 3.5 0 0 1 0 4.94L9 15l-1.53-1.53a3.5 3.5 0 0 1 0-4.94Z"/><path d="M11.47 4.53 13 3l1.53 1.53a3.5 3.5 0 0 1 0 4.94L13 11l-1.53-1.53a3.5 3.5 0 0 1 0-4.94Z"/><path d="M20 2h2v2a4 4 0 0 1-4 4h-2V6a4 4 0 0 1 4-4Z"/><path d="M11.47 17.47 13 19l-1.53 1.53a3.5 3.5 0 0 1-4.94 0L5 19l1.53-1.53a3.5 3.5 0 0 1 4.94 0Z"/><path d="M15.47 13.47 17 15l-1.53 1.53a3.5 3.5 0 0 1-4.94 0L9 15l1.53-1.53a3.5 3.5 0 0 1 4.94 0Z"/><path d="M19.47 9.47 21 11l-1.53 1.53a3.5 3.5 0 0 1-4.94 0L13 11l1.53-1.53a3.5 3.5 0 0 1 4.94 0Z"/></svg>
         </div>
@@ -66,6 +82,95 @@ import Banner from "/public/banner.png";
     </div>
   </div>
 
+  <!-- Seccion -->
+  <div class="pt-20 grid grid-cols-7 grid-rows-6 gap-4 h-[500px]">
+    <!-- Categoría 1 -->
+    <div class="col-span-2  row-span-7 cursor-pointer bg-sky-200 hover:bg-sky-300 rounded-lg flex group">
+      <section class="py-0 relative bg-cover bg-center text-left flex-1 ">
+        <div class="col-span-2 row-span-7 rounded-lg flex relative">
+          <div class="absolute z-0 inset-0 flex transition justify-end duration-300 transform origin-bottom-right scale-100 group-hover:scale-120">
+            <img src={Baguette1.src} alt="Baguette" class="max-w-full max-h-full object-contain" />
+          </div>  
+          <div class="py-14 px-14 relative z-40 flex flex-col place-items-start">
+            <div class="leading-normal tracking-wide text-2xl font-semibold text-gray-900">
+              Bollería y viennoiserie
+            </div>
+            <button class="cursor-pointer group-hover:bg-white group-hover:text-black bg-emerald-400 text-white rounded-lg px-4 py-2 mt-4 transition duration-300">
+              Descubre más
+            </button>
+          </div>
+        </div>
+      </section>     
+    </div>
+
+    <!-- Categoría 2 -->
+    <div class="col-span-3 row-span-3 cursor-pointer bg-amber-200 hover:bg-amber-300 rounded-lg flex items-center justify-center group">
+      <section class="py-0 relative bg-cover bg-center text-left flex-1">
+        <div class="col-span-2  row-span-7 rounded-lg flex ">
+          <div class="absolute z-0 inset-0 flex transition justify-end duration-300 transform origin-bottom-right scale-100 group-hover:scale-120">
+            <img src={Baguette1.src} alt="Baguette" class="max-w-full max-h-full object-contain" />
+          </div>
+          <div class="py-10 px-8 relative z-40 flex flex-col place-items-start">
+            <div class="leading-normal tracking-wide text-2xl font-semibold text-gray-900">Panes artesanales</div>
+            <button class="cursor-pointer group-hover:bg-white group-hover:text-black bg-emerald-400 text-white rounded-lg px-4 py-2 mt-4 transition duration-300">
+                Descubre más                
+            </button>
+          </div>
+        </div>
+      </section>  
+    </div>
+    <!-- Categoría 3 -->
+    <div class="col-span-2 row-span-3 cursor-pointer bg-fuchsia-200 hover:bg-fuchsia-300 rounded-lg flex items-center justify-center group">
+      <section class="py-0 relative bg-cover bg-center text-left flex-1">
+        <div class="col-span-2  row-span-7 rounded-lg flex ">
+          <div class="absolute z-0 inset-0 flex transition justify-end duration-300 transform origin-bottom-right scale-100 group-hover:scale-120">
+            <img src={Baguette1.src} alt="Baguette" class="max-w-full max-h-full object-contain" />
+          </div>
+          <div class="py-8 px-8 relative z-40 flex flex-col place-items-start">
+            <div class="leading-normal tracking-wide text-2xl font-semibold text-gray-900">Ediciones especiales</div>
+            <button class="cursor-pointer group-hover:bg-white group-hover:text-black bg-emerald-400 text-white rounded-lg px-4 py-2 mt-4 transition duration-300">
+                Descubre más                
+            </button>
+          </div>
+        </div>
+      </section>  
+    </div>
+    <!-- Categoría 4 -->
+    <div class="col-span-2 row-span-4  cursor-pointer bg-rose-200 hover:bg-rose-300 rounded-lg flex items-center justify-center group">
+      <section class="py-0 relative bg-cover bg-center text-left flex-1 ">
+        <div class="col-span-2  row-span-7 rounded-lg flex ">
+          <div class="absolute z-0 inset-0 flex transition justify-end duration-300 transform origin-bottom-right scale-100 group-hover:scale-120">
+            <img src={Baguette1.src} alt="Baguette" class="max-w-full max-h-full object-contain" />
+          </div>
+          <div class="py-8 px-8 relative z-40 flex flex-col place-items-start">
+            <div class="leading-normal tracking-wide text-2xl font-semibold text-gray-900">Dulces y pasteles</div>
+            <button class="cursor-pointer group-hover:bg-white group-hover:text-black bg-emerald-400 text-white rounded-lg px-4 py-2 mt-4 transition duration-300">
+                Descubre más                
+            </button>
+          </div>
+        </div>
+      </section>  
+    </div>
+    <!-- Categoría 5 -->
+    <div class="col-span-3 row-span-4 cursor-pointer bg-green-200 hover:bg-green-300 rounded-lg flex items-center justify-center group">
+      <section class="py-0 relative bg-cover bg-center text-left flex-1">
+        <div class="col-span-2  row-span-7 rounded-lg flex ">
+          <div class="absolute z-0 inset-0 flex transition justify-end duration-300 transform origin-bottom-right scale-100 group-hover:scale-120">
+            <img src={Baguette1.src} alt="Baguette" class="max-w-full max-h-full object-contain" />
+          </div>
+          <div class="py-8 px-8 relative z-40 flex flex-col place-items-start">
+            <div class="leading-normal tracking-wide text-2xl font-semibold text-gray-900">Panadería saludable</div>
+            <button class="cursor-pointer group-hover:bg-white group-hover:text-black bg-emerald-400 text-white rounded-lg px-4 py-2 mt-4 transition duration-300">
+                Descubre más                
+            </button>
+          </div>
+        </div>
+      </section>  
+    </div>
+  </div>
+  
+
+  <!-- Para seguir editando -->
   <section
     style={`background-image: url('${Banner.src}');`}
     class="bg-cover bg-center bg-text-left p-10 md:p-20 text-white rounded-lg shadow-lg flex-1 duration-300 hover:scale-105"
