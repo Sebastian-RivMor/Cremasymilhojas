@@ -10,5 +10,8 @@ export default defineConfig({
   },
 
   integrations: [auth()],
-  adapter: vercel(),
+  output: 'server',
+  adapter: vercel({
+    skewProtection: true,
+  }),
 });
