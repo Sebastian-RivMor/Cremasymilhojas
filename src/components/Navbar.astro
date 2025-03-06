@@ -1,18 +1,19 @@
 ---
-import CremaLogo from '../assets/logo_white.svg';
+import LogoWhite from '../assets/logo_white.svg';
+import LogoBlack from '../assets/logo_black.svg';
 ---
 
 <nav class="">
 	<div class="container mx-auto flex flex-wrap items-center justify-between py-4  ">
 		<a href="#" class="flex items-center space-x-3 rtl:space-x-reverse">
-		<img src={CremaLogo.src} class="h-9" alt="Logo" />
+		<img src={LogoBlack.src} class="h-9" alt="Logo" />
 		</a>
 
     <!-- Menú Hamburguesa para pantallas pequeñas -->
 		<button
 		data-collapse-toggle="navbar-sticky"
 		type="button"
-		class="inline-flex items-center p-2 text-sm text-white rounded-lg md:hidden hover:bg-gray-700 focus:outline-none focus:ring-2 focus:ring-gray-600"
+		class="inline-flex items-center p-2 text-sm text-black rounded-lg md:hidden hover:bg-gray-700 focus:outline-none focus:ring-2 focus:ring-gray-600"
 		aria-controls="navbar-sticky"
 		aria-expanded="false"
 		>
@@ -41,16 +42,16 @@ import CremaLogo from '../assets/logo_white.svg';
     >
       <ul class="flex flex-col md:flex-row gap-5 bg-black md:bg-transparent p-4 md:p-0 md:space-x-5">
         <li>
-          <a href="#" class="text-white hover:text-amber-500">Inicio</a>
+          <a href="#" class="text-black hover:text-amber-500">Inicio</a>
         </li>
         <li>
-          <a href="#" class="text-white hover:text-amber-500">Productos</a>
+          <a href="#" class="text-black hover:text-amber-500">Productos</a>
         </li>
         <li>
-          <a href="#" class="text-white hover:text-amber-500">Sobre Nosotros</a>
+          <a href="#" class="text-black hover:text-amber-500">Sobre Nosotros</a>
         </li>
         <li>
-          <a href="#" class="text-white hover:text-amber-500">Contacto</a>
+          <a href="#" class="text-black hover:text-amber-500">Contacto</a>
         </li>
       </ul>
     </div>
@@ -58,11 +59,11 @@ import CremaLogo from '../assets/logo_white.svg';
     <!-- Botón de llamada a la acción -->
     <div class="flex flex-col md:flex-row gap-5 md:order-2 space-x-3 rtl:space-x-reverse">
       <div class="cursor-pointer">
-        <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" viewBox="0 0 24 24" fill="none" stroke="#ffffff" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-search"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.3-4.3"/></svg>        
+        <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" viewBox="0 0 24 24" fill="none" stroke="#000000" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-search"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.3-4.3"/></svg>        
       </div>
-      <button onclick="window.location.href='/login'" class="cursor-pointer">
-        <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" viewBox="0 0 24 24" fill="none" stroke="#ffffff" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-user-round"><circle cx="12" cy="8" r="5"/><path d="M20 21a8 8 0 0 0-16 0"/></svg>
-      </button>
+      <div onclick="window.location.href='/login'" class="cursor-pointer">
+        <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" viewBox="0 0 24 24" fill="none" stroke="#000000" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-user-round"><circle cx="12" cy="8" r="5"/><path d="M20 21a8 8 0 0 0-16 0"/></svg>
+      </div>
     </div>
   </div>
 </nav>
