@@ -1,6 +1,6 @@
 ---
 title: "Croissant"
-img: "croisant.png"
+img: "/croisant.png"
 price: 25.00
 ---
 

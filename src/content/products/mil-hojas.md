@@ -1,6 +1,6 @@
 ---
 title: "Mil Hojas"
-img: "milhojas.png"
+img: "/milhojas.png"
 price: 15.00
 ---
 
