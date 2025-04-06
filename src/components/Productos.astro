@@ -4,43 +4,135 @@ import type { CollectionEntry } from 'astro:content';
 
 const products: CollectionEntry<'products'>[] = await getCollection('products');
 ---
-<div class="container mx-auto flex flex-row">
-    <!-- Barra de filtros-->
-    <div class="w-1/4 h-full">
-        <div class="flex justify-between items-center bg-gray-100 p-4 mt-10">
-            Barra de filtros
-        </div>
-        <!-- Aquí puedes agregar los filtros -->
+<div class="flex flex-row container mx-auto mt-5 relative">
+        <!-- Línea con degradado -->
+    <div class="absolute top-0 left-0 w-full h-[1px] bg-gradient-to-r from-transparent via-gray-300 to-transparent"></div>
+
+    <div class="w-1/5 container mx-auto mt-10 pl-4 pr-2">
+        <aside>
+            <div>
+              <form class="divide-y-[1px] divide-gray-300">
+                <fieldset class="pb-10">
+                  <legend class="text-md font-medium mb-2">Categoría</legend>
+                  <div class="flex flex-col space-y-2">
+                    <label class="flex items-center space-x-2">
+                      <input type="checkbox" class="w-4 h-4 accent-amber-400">
+                      <span>Bollería</span>
+                    </label>
+                    <label class="flex items-center space-x-2">
+                      <input type="checkbox" class="w-4 h-4 accent-amber-400">
+                      <span>Dulces</span>
+                    </label>
+                    <label class="flex items-center space-x-2">
+                      <input type="checkbox" class="w-4 h-4 accent-amber-400">
+                      <span>Especiales</span>
+                    </label>
+                    <label class="flex items-center space-x-2">
+                      <input type="checkbox" class="w-4 h-4 accent-amber-400">
+                      <span>Pan artesanal</span>
+                    </label>
+                    <label class="flex items-center space-x-2">
+                      <input type="checkbox" class="w-4 h-4 accent-amber-400">
+                      <span>Pan saludable</span>
+                    </label>
+                  </div>
+                </fieldset>
+                <fieldset class="mt-10 pb-10">
+                  <legend class="text-md font-medium mb-2">Precios</legend>
+                  <div class="flex flex-col space-y-2">
+                    <label class="flex items-center space-x-2">
+                      <input type="checkbox" class="w-4 h-4 accent-amber-400">
+                      <span>Menos de S/ 5</span>
+                    </label>
+                    <label class="flex items-center space-x-2">
+                      <input type="checkbox" class="w-4 h-4 accent-amber-400">
+                      <span>S/ 5 - S/ 10</span>
+                    </label>
+                    <label class="flex items-center space-x-2">
+                        <input type="checkbox" class="w-4 h-4 accent-amber-400">
+                        <span>S/ 10 - S/ 25</span>
+                    </label>
+                    <label class="flex items-center space-x-2">
+                      <input type="checkbox" class="w-4 h-4 accent-amber-400">
+                      <span>Más de S/ 25</span>
+                  </label>
+                  </div>
+                </fieldset>            
+                <fieldset class="mt-10 pb-10">
+                  <legend class="text-md font-medium mb-2">Porciones</legend>
+                  <div class="flex flex-col space-y-2">
+                    <label class="flex items-center space-x-2">
+                      <input type="checkbox" class="w-4 h-4 accent-amber-400">
+                      <span>Individual</span>
+                    </label>
+                    <label class="flex items-center space-x-2">
+                      <input type="checkbox" class="w-4 h-4 accent-amber-400">
+                      <span>Mediano</span>
+                    </label>
+                    <label class="flex items-center space-x-2">
+                        <input type="checkbox" class="w-4 h-4 accent-amber-400">
+                        <span>Familiar</span>
+                    </label>
+                  </div>
+                </fieldset>
+                <fieldset class="mt-10 pb-10">
+                    <legend class="text-md font-medium mb-2">Método de Entrega</legend>
+                    <div class="flex flex-col space-y-2">
+                      <label class="flex items-center space-x-2">
+                        <input type="checkbox" class="w-4 h-4 accent-amber-400">
+                        <span>Retiro en tienda</span>
+                      </label>
+                      <label class="flex items-center space-x-2">
+                        <input type="checkbox" class="w-4 h-4 accent-amber-400">
+                        <span>Entrega a domicilio</span>
+                      </label>
+                    </div>
+                  </fieldset>
+              </form>
+            </div>
+        </aside>
     </div>
+    
 
     <!-- Grid Productos-->
-    <div class="w-3/4 h-full">
-        <section class="mx-auto px-4 max-w-screen-xl mt-10">
-            <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6 md:gap-6 lg:gap-6">
-                {
-                    products.map(product => {
-                        const { slug, data } = product;
-                        const { title, img, price } = data;
+    <section class="w-4/5 mx-auto px-14 max-w-screen-xl mt-10">
+        <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-3 gap-10 md:gap-6 lg:gap-10">
+            {
+                products.map(product => {
+                    const { slug, data } = product;
+                    const { title, img, price, categoria } = data;
 
-                        return (
-                            <article class="bg-white border p-4 rounded-2xl shadow-md transition-transform duration-300 ease-in-out hover:scale-105 hover:shadow-2xl text-center">
-                                <h3 class="text-lg font-semibold">{title}</h3>
-                                <img class="mx-auto mb-2" src={`${img}`} alt={title} />
-                                <p class="text-gray-950 text-2xl">S/ {price}</p>
-                                <button 
-                                    class="mt-2 px-4 py-2 bg-black text-white rounded-lg shadow-md hover:scale-105 cursor-pointer add-to-cart"
-                                    data-slug={slug}
-                                    data-title={title}
-                                    data-img={img}
-                                    data-price={price}
-                                >
-                                    Añadir al carrito
-                                </button>
-                            </article>
-                        )
-                    })
-                }
-            </div>
-        </section>
-    </div>
+                    return (
+                    <article class="group bg-gradient-to-bl from-blue-50/70 to-white border border-stone-200 p-8 rounded-xl shadow-sm text-center hover:shadow-lg ">
+                            <!-- Título -->
+                            <p class="text-lg tracking-wide text-gray-700 font-semibold">{title}</p>
+                            <!-- Descripción -->
+                            <p class="mt-1 text-xs tracking-wider text-gray-400 font-medium"> {categoria}</p>
+                            <!-- Imagen -->
+                            <div class="py-4 flex items-center justify-center transition-transform duration-300 ease-in-out group-hover:scale-105 ">
+                              <img class="h-34 w-96 object-cover" src={`${img}`} alt={title} />
+                            </div>
+                            <!-- Precio -->
+                            <p class="text-gray-700 text-xl tracking-wide">S/ {price.toFixed(2)}</p>
+                            <!-- Línea con degradado --> 
+                            <div class="py-8">
+                              <p class="top-0 left-0 w-full h-[1px] bg-gradient-to-r from-transparent from-10% via-gray-300 to-transparent to-90%"></p>
+                            </div>
+                            <!-- Botón de compra -->
+                            <button 
+                                class="px-7 py-2 border border-yellow-600 text-yellow-600 rounded-full transition-all duration-300 ease-in-out
+                        hover:bg-transparent hover:border-yellow-700/80 hover:bg-gradient-to-r hover:from-yellow-600 hover:to-yellow-700/80 hover:bg-clip-text hover:text-transparent hover:scale-103 cursor-pointer add-to-cart"
+                                data-slug={slug}
+                                data-title={title}
+                                data-img={img}
+                                data-price={price}
+                            >
+                                COMPRAR
+                            </button>
+                        </article>
+                    )
+                })
+            }
+        </div>
+    </section>
 </div>

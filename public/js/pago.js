@@ -25,4 +25,3 @@ document.addEventListener("DOMContentLoaded", function () {
     alert("¡Compra realizada con éxito!");
     window.location.href = "/";
   }
-  

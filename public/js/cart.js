@@ -1,9 +1,10 @@
+const continuePago = document.getElementById('continue-pago');
+
 document.addEventListener("DOMContentLoaded", function () {
     const cartButton = document.getElementById('cart-button');
     const cartCount = document.getElementById('cart-count');
     const checkoutModal = document.getElementById('checkout-modal');
     const continueShopping = document.getElementById('continue-shopping');
-    const continuePago = document.getElementById('continue-pago');
     const checkoutOverlay = document.getElementById("checkout-overlay");
     const cartContainer = document.getElementById('cart-items');
 
@@ -26,7 +27,7 @@ document.addEventListener("DOMContentLoaded", function () {
     
         if (cart.length === 0) {
             cartContainer.innerHTML = "<p class='text-gray-500 text-center'>Tu carrito está vacío.</p>";
-            cartTotal.textContent = "Total: $0.00"; // Reiniciar total
+            cartTotal.textContent = "Total: S/ 0.00"; // Reiniciar total
         } else {
             cart.forEach((product, index) => {
                 const item = document.createElement('div');
@@ -36,16 +37,16 @@ document.addEventListener("DOMContentLoaded", function () {
                     <img src="${product.img}" class="checkout-img border">
                     <div class="flex-1 text-left">
                         <p class="font-semibold text-sm">${product.title}</p>
-                        <p class="text-gray-600 text-xs">S/${product.price}</p>
+                        <p class="text-gray-600 text-xs">S/ ${product.price}</p>
                     </div>
-                    <button class="remove-item text-red-600 text-xs px-2">✕</button>
+                    <button class="cursor-pointer remove-item text-red-600 text-xs px-2">✕</button>
                 `;
     
                 cartContainer.appendChild(item);
                 total += parseFloat(product.price)||0; // Sumar precios al total
             });
     
-            cartTotal.textContent = `Total: S/${total.toFixed(2)}`; // Mostrar total con 2 decimales
+            cartTotal.textContent = `Total: S/ ${total.toFixed(2)}`; // Mostrar total con 2 decimales
     
             // Agregar evento a los botones de eliminar
             document.querySelectorAll('.remove-item').forEach((button, index) => {
